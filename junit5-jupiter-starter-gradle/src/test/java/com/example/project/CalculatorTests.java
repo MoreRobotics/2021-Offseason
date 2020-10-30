@@ -26,6 +26,13 @@ class CalculatorTests {
 		assertEquals(2, calculator.add(1, 1), "1 + 1 should equal 2");
 	}
 
+	@Test
+	@DisplayName("3 * 7 = 21")
+	void multipliesTwoNumbers() {
+		Calculator calculator = new Calculator();
+		assertEquals(21, calculator.multiply(3, 7), "3 * 7 should equal 21");
+	}
+
 	@ParameterizedTest(name = "{0} + {1} = {2}")
 	@CsvSource({
 			"0,    1,   1",
