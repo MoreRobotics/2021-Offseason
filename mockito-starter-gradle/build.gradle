@@ -1,23 +1,13 @@
 plugins {
 	id 'java'
-	id 'eclipse' // optional (to generate Eclipse project files)
-	id 'idea' // optional (to generate IntelliJ IDEA project files)
 }
 
 repositories {
 	mavenCentral()
+	jcenter()
 }
 
 dependencies {
-	testImplementation(platform('org.junit:junit-bom:5.7.0'))
-	testImplementation('org.junit.jupiter:junit-jupiter')
+    testImplementation('junit:junit:4.13')
 	testCompile "org.mockito:mockito-core:2.+"
-	testCompile('org.mockito:mockito-junit-jupiter:2.18.3')
-}
-
-test {
-	useJUnitPlatform()
-	testLogging {
-		events "passed", "skipped", "failed"
-	}
 }
